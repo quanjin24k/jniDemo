@@ -46,6 +46,8 @@ public class MainActivity extends Activity implements OnClickListener {
         findViewById(R.id.btn_105).setOnClickListener(this);
         findViewById(R.id.btn_106).setOnClickListener(this);
         findViewById(R.id.btn_107).setOnClickListener(this);
+        findViewById(R.id.btn_108).setOnClickListener(this);
+        
         
         cn = new CounterNative();
         encodePwd = new EncodeDecodePwd();
@@ -100,6 +102,10 @@ public class MainActivity extends Activity implements OnClickListener {
 				Toast.makeText(this, "待解码的String不能为空", Toast.LENGTH_SHORT).show();
 			}
 			
+			break;
+		case R.id.btn_108://C++层线程进入java层测试
+			//TODO 还有点问题 后续再查
+//			new cn.hubery.testjni.nativethread.CounterNative().execute(15);
 			break;
 		default:
 			break;

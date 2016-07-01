@@ -1,4 +1,11 @@
 #include <jni.h>
+#include <android/log.h>
+
+#define LOGV(...) __android_log_print(ANDROID_LOG_VERBOSE, "System.out", __VA_ARGS__)
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG , "System.out", __VA_ARGS__)
+#define LOGI(...) __android_log_print(ANDROID_LOG_INFO  , "System.out", __VA_ARGS__)
+#define LOGW(...) __android_log_print(ANDROID_LOG_WARN  , "System.out", __VA_ARGS__)
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR  , "System.out", __VA_ARGS__)
 
 jclass m_class;//全局类
 jobject m_object;//全局对象
@@ -38,6 +45,7 @@ JNIEXPORT void JNICALL Java_cn_hubery_testjni_exams_CounterNative_nativeExcute
 	{
 		sum += i;
 	}
+	LOGI("sum=%d", sum);
 	//根据m_object和m_mid，通过VM能够调用当前对象的setV函数；把数据传送到java层；
 	(*env)->CallVoidMethod(env, m_object, m_mid, sum);
 	return;

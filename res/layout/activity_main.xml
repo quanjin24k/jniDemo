@@ -67,5 +67,11 @@
         android:layout_height="wrap_content"
         android:text="btn_decode"
         android:layout_below="@id/btn_106"/>
+    <Button android:id="@+id/btn_108"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="C/C++线程进入Java层操作"
+        android:layout_below="@id/btn_107"/>
     
 </RelativeLayout>

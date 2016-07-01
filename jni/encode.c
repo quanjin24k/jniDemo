@@ -67,7 +67,7 @@ JNIEXPORT jstring JNICALL Java_cn_hubery_testjni_encode_EncodeDecodePwd_decodePw
  * Signature: ([I)V
  */
 JNIEXPORT void JNICALL Java_cn_hubery_testjni_encode_EncodeDecodePwd_transmit
-  (JNIEnv *env, jobject thiz, jintArray )
+  (JNIEnv *env, jobject thiz, jintArray array)
 {
 
 	return;

@@ -60,6 +60,8 @@ include $(CLEAR_VARS)
 LOCAL_MODULE    := CounterNative
 LOCAL_SRC_FILES := CounterNative.c
 
+LOCAL_LDLIBS := -llog
+
 include $(BUILD_SHARED_LIBRARY)
 
 # sixth lib,  --->>>NativeGetFieldFromJava.so
@@ -79,3 +81,19 @@ LOCAL_MODULE    := encode
 LOCAL_SRC_FILES := encode.c
 
 include $(BUILD_SHARED_LIBRARY)
+
+
+# 8th lib,  --->>>NativeThread.so
+#
+include $(CLEAR_VARS)
+
+LOCAL_MODULE    := NativeThread
+LOCAL_SRC_FILES := cn_hubery_testjni_nativethread_CounterNative.cpp
+
+LOCAL_LDLIBS := -llog
+
+include $(BUILD_SHARED_LIBRARY)
+
+
+
+
